@@ -30,5 +30,5 @@ npm test
 ```
 
 ## Failed tests commit
-Commit: [4451ce9eb31ecb843b0bf7f6fb07981153b63b56](https://github.com/holdennekt/metodologiiLab2/commit/4451ce9eb31ecb843b0bf7f6fb07981153b63b56)
-GitHub Actions workflow: (https://github.com/holdennekt/metodologiiLab2/runs/5561281865?check_suite_focus=true)
+Commit: [4451ce9eb31ecb843b0bf7f6fb07981153b63b56](https://github.com/holdennekt/metodologiiLab2/commit/4451ce9eb31ecb843b0bf7f6fb07981153b63b56) <br>
+GitHub Actions workflow: https://github.com/holdennekt/metodologiiLab2/runs/5561281865?check_suite_focus=true

@@ -69,6 +69,9 @@ class LinkedList {
     if (index > lastIndex || index < 0) {
       throw new Error(`valid indexes: 0-${lastIndex}, provided: ${index}`);
     }
+
+    const value = this.get(index);
+
     if (lastIndex === 0) {
       this.head = null;
       this.tail = null;
@@ -86,6 +89,7 @@ class LinkedList {
     }
 
     this.size--;
+    return value;
   }
 
   deleteAll(value) {

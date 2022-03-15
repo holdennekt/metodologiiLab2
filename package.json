@@ -4,7 +4,8 @@
   "description": "",
   "main": "list.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint --fix *.js || prettier -w *.js"
   },
   "repository": {
     "type": "git",

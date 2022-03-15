@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class Node {
   constructor(value) {
@@ -106,11 +106,23 @@ class LinkedList {
     return node.value;
   }
 
+  #cloneObj(obj) {
+    const clone = {};
+    for (const i in obj) {
+      if (typeof obj[i] === "object") {
+        clone[i] = this.#cloneObj(obj[i]);
+      } else clone[i] = obj[i];
+    }
+    return clone;
+  }
+
   clone() {
     const cloned = new LinkedList();
     let node = this.head;
     while (node) {
-      cloned.append(node.value);
+      if (typeof node.value === "object") {
+        cloned.append(this.#cloneObj(node.value));
+      } else cloned.append(node.value);
       node = node.next;
     }
     return cloned;
@@ -161,11 +173,11 @@ class LinkedList {
 
   toStr() {
     let node = this.head;
-    let str = '';
+    let str = "";
     for (let i = 0; i < this.size; i++) {
       if (i === this.size - 1) str += node.value;
       else {
-        str += node.value + ' <-> ';
+        str += node.value + " <-> ";
         node = node.next;
       }
     }

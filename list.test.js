@@ -17,7 +17,11 @@ test('append', () => {
 });
 
 test('length', () => {
-  const list = new LinkedList('sugar', 'honey', 'ice', '&', 'tea');
+  const list = new LinkedList();
+
+  expect(list.length()).toBe(0);
+
+  list.append('sugar', 'honey', 'ice', '&', 'tea');
 
   expect(list.length()).toBe(5);
 });
@@ -41,7 +45,8 @@ test('delete', () => {
   list.delete(0);
   list.delete(2);
   list.delete(1);
-  list.delete(1);
+  
+  expect(list.delete(1)).toBe('to');
 
   expect(list.toStr()).toBe('don\'t <-> say');
 
@@ -57,6 +62,10 @@ test('delete', () => {
 
 test('deleteAll', () => {
   const list = new LinkedList('1', 'x', '1');
+
+  list.deleteAll('1x1');
+
+  expect(list.toStr()).toBe('1 <-> x <-> 1');
 
   list.deleteAll('1');
 
@@ -115,6 +124,7 @@ test('extend', () => {
   const second = new LinkedList('bring', 'me', 'the', 'horizon');
 
   list.extend(second);
+  second.append('very', 'much');
 
   expect(list.toStr()).toBe('i <-> love <-> bring <-> me <-> the <-> horizon');
 });

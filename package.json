@@ -1,0 +1,22 @@
+{
+  "name": "metodologiilab2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "list.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holdennekt/metodologiiLab2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/holdennekt/metodologiiLab2/issues"
+  },
+  "homepage": "https://github.com/holdennekt/metodologiiLab2#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
